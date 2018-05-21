@@ -336,48 +336,6 @@ li.skill-bar .bar-expand{
     height: 30px;
     margin-top: 0px;
 }
-.ani-html{
-    width: 75%;
-    -webkit-animation-name: skill-html; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: skill-html;  
-    animation-duration: 2s;
-}
-.ani-css{
-    width: 70%;
-    -webkit-animation-name: skill-css; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: skill-css;
-    animation-duration: 2s;
-}
-.ani-js{
-    width: 55%;
-    -webkit-animation-name: skill-js; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: skill-js;
-    animation-duration: 2s;
-}
-.ani-php{
-    width: 60%;
-    -webkit-animation-name: skill-php; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: skill-php;
-    animation-duration: 2s;
-}
-.ani-obj-c{
-    width: 40%;
-    -webkit-animation-name: skill-obj-c; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: skill-obj-c;
-    animation-duration: 2s;
-}
-.ani-java{
-    width: 40%;
-    -webkit-animation-name: skill-java; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
-    animation-name: skill-java;
-    animation-duration: 2s;
-}
 .ani-toeic{
     width: 77%;
     -webkit-animation-name: skill-toeic; /* Chrome, Safari, Opera */
@@ -386,61 +344,6 @@ li.skill-bar .bar-expand{
     animation-duration: 2s;
 }
 /* Chrome, Safari, Opera */
-@-webkit-keyframes skill-html {
-    from {width: 0%;}
-    to {width: 75%;}
-}
-/* Standard syntax */
-@keyframes skill-html {
-    from {width: 0%;}
-    to {width: 75%;}
-}
-
-@-webkit-keyframes skill-css {
-    from {width: 0%;}
-    to {width: 70%;}
-}
-@keyframes skill-css {
-    from {width: 0%;}
-    to {width: 70%;}
-}
-
-@-webkit-keyframes skill-js {
-    from {width: 0%;}
-    to {width: 55%;}
-}
-@keyframes skill-js {
-    from {width: 0%;}
-    to {width: 55%;}
-}
-
-@-webkit-keyframes skill-php {
-    from {width: 0%;}
-    to {width: 60%;}
-}
-@keyframes skill-php {
-    from {width: 0%;}
-    to {width: 60%;}
-}
-
-@-webkit-keyframes skill-obj-c {
-    from {width: 0%;}
-    to {width: 40%;}
-}
-@keyframes skill-obj-c {
-    from {width: 0%;}
-    to {width: 40%;}
-}
-
-@-webkit-keyframes skill-java {
-    from {width: 0%;}
-    to {width: 40%;}
-}
-@keyframes skill-java {
-    from {width: 0%;}
-    to {width: 40%;}
-}
-
 @-webkit-keyframes skill-toeic {
     from {width: 0%;}
     to {width: 77%;}

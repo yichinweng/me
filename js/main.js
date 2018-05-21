@@ -78,35 +78,19 @@ $(function() {
 
   /* skill bar animate */
   $(window).scroll(function () {
-
-    //console.log($(window).width());
-    //console.log($('#skill').offset().top);
     var offsetTop = 700;
-    //console.log($(window).scrollTop() + offsetTop);
-    if ($(window).scrollTop() + offsetTop  > $('#skill').offset().top){
+    if ($(window).scrollTop() + offsetTop  > $('#skill').offset().top) {
       $(".toeic").addClass('ani-toeic');
-      $(".skill-html").addClass('ani-html');
-      $(".skill-css").addClass('ani-css');
-      $(".skill-js").addClass('ani-js');
-      $(".skill-php").addClass('ani-php');
-      $(".skill-obj-c").addClass('ani-obj-c');
-      $(".skill-java").addClass('ani-java');
     }
   });
 
   /*nivo slider stop*/
   $(window).load(function() {
-      $('#slider-doodleit').nivoSlider();
-      $('#slider-doodleit').data('nivoslider').stop();
-
       $('#slider-kaoture').nivoSlider();
       $('#slider-kaoture').data('nivoslider').stop();
 
       $('#slider-linemart').nivoSlider();
       $('#slider-linemart').data('nivoslider').stop();
-
-      $('#slider-jq').nivoSlider();
-      $('#slider-jq').data('nivoslider').stop();
 
       $('#slider-Hacc').nivoSlider();
       $('#slider-Hacc').data('nivoslider').stop();
@@ -117,19 +101,6 @@ $(function() {
   $('.portfolio-link').magnificPopup({
       type:'inline',
       midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-  });
-  $('#portfolio-slide-doodleit').magnificPopup({
-    type:'inline',
-    midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-    callbacks: {
-      open: function() {
-        $('#slider-doodleit').data('nivoslider').start();
-          
-      },
-      close: function() {
-        $('#slider-doodleit').data('nivoslider').stop();
-      }
-    }
   });
   $('#portfolio-slide-kaoture').magnificPopup({
     type:'inline',
@@ -154,19 +125,6 @@ $(function() {
       },
       close: function() {
         $('#slider-linemart').data('nivoslider').stop();
-      }
-    }
-  });
-  $('#portfolio-slide-jq').magnificPopup({
-    type:'inline',
-    midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-    callbacks: {
-      open: function() {
-        $('#slider-jq').data('nivoslider').start();
-          
-      },
-      close: function() {
-        $('#slider-jq').data('nivoslider').stop();
       }
     }
   });
