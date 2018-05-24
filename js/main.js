@@ -86,6 +86,9 @@ $(function() {
 
   /*nivo slider stop*/
   $(window).load(function() {
+      $('#slider-csquare').nivoSlider();
+      $('#slider-csquare').data('nivoslider').stop();
+
       $('#slider-kaoture').nivoSlider();
       $('#slider-kaoture').data('nivoslider').stop();
 
