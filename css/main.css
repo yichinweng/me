@@ -274,7 +274,7 @@ section#about a:hover, section#about a:focus{
     color: #888;
 }
 div#profile-pic{
-    background: url('../img/profile.jpg');
+    background: url('../img/profile.jpg?20180525');
     background-size: cover;
     background-position: center center;
     width: 140px;
