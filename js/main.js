@@ -1,19 +1,19 @@
-$(function() {
+$(function () {
 
   /* scrollDepth */
   $.scrollDepth();
 
   /* text-fit */
-  setTimeout(function() {
+  setTimeout(function () {
     $('#title').fitText(1, { minFontSize: '20px', maxFontSize: '90px' });
   }, 100);
 
-  /* smoth scrolling */
+  /* smooth scrolling */
   //scroll smooth : https://css-tricks.com/snippets/jquery/smooth-scrolling
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+  $('a[href*=#]:not([href=#])').click(function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top
@@ -22,31 +22,31 @@ $(function() {
       }
     }
   });
-  
+
   /* scroll-watch*/
   $('.scrollwatch').scrollWatch(function (focus) {
-      //console.log(focus);
-      //console.log(focus.section.id);
-      $('#navbar > a').removeClass('active');
-      $('#navbar > a[href=#'+focus.section.id+']').addClass('active');
-      if(focus.section.id=='hide-menu'){
-        $('#navbar').hide("normal");
-      }
-      else if(focus.section.id!='hide-menu'&&focus.section.id!='scroll-top'){
-        $('#navbar').addClass('bgblack');
-        $('#navbar').show("normal");
-      }
-      else if(focus.section.id=='scroll-top'){
-        $('#navbar').show("normal");
-        $('#navbar').removeClass('bgblack');
-        $('#navbar > a[href=#top]').addClass('active');
-      }
-    },{
-      resolutionMode:'focus-line',
-      debugFocusLine:0,
-      focusRatio:0,
-      focusOffset:0
-  });
+    //console.log(focus);
+    //console.log(focus.section.id);
+    $('#navbar > a').removeClass('active');
+    $('#navbar > a[href=#' + focus.section.id + ']').addClass('active');
+    if (focus.section.id == 'hide-menu') {
+      $('#navbar').hide("normal");
+    }
+    else if (focus.section.id != 'hide-menu' && focus.section.id != 'scroll-top') {
+      $('#navbar').addClass('bgblack');
+      $('#navbar').show("normal");
+    }
+    else if (focus.section.id == 'scroll-top') {
+      $('#navbar').show("normal");
+      $('#navbar').removeClass('bgblack');
+      $('#navbar > a[href=#top]').addClass('active');
+    }
+  }, {
+      resolutionMode: 'focus-line',
+      debugFocusLine: 0,
+      focusRatio: 0,
+      focusOffset: 0
+    });
 
   /*radar chart*/
   // Get context with jQuery - using jQuery's .get() method.
@@ -54,23 +54,23 @@ $(function() {
   // This will get the first returned node in the jQuery collection.
   var myNewChart = new Chart(ctx);
   var data = {
-      labels: ["責任心", "一不作二不休", "天然搞笑", "善良", "運氣值", "好奇心"],
-      datasets: [
-          {
-              label: "My First dataset",
-              fillColor: "rgba(151,187,205,0.2)",
-              strokeColor: "rgba(151,187,205,1)",
-              pointColor: "rgba(151,187,205,1)",
-              pointStrokeColor: "#fff",
-              pointHighlightFill: "#fff",
-              pointHighlightStroke: "rgba(151,187,205,1)",
-              data: [9, 10, 6, 8, 2, 7]
-          }
-      ]
+    labels: ["責任心", "一不作二不休", "天然搞笑", "善良", "運氣值", "好奇心"],
+    datasets: [
+      {
+        label: "My First dataset",
+        fillColor: "rgba(151,187,205,0.2)",
+        strokeColor: "rgba(151,187,205,1)",
+        pointColor: "rgba(151,187,205,1)",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(151,187,205,1)",
+        data: [9, 10, 6, 8, 2, 7]
+      }
+    ]
   };
   var options = {
     pointLabelFontColor: "#555",
-    pointLabelFontSize : 15
+    pointLabelFontSize: 15
 
   };
 
@@ -79,67 +79,67 @@ $(function() {
   /* skill bar animate */
   $(window).scroll(function () {
     var offsetTop = 700;
-    if ($(window).scrollTop() + offsetTop  > $('#skill').offset().top) {
+    if ($(window).scrollTop() + offsetTop > $('#skill').offset().top) {
       $(".toeic").addClass('ani-toeic');
     }
   });
 
   /*nivo slider stop*/
-  $(window).load(function() {
-      $('#slider-csquare').nivoSlider();
-      $('#slider-csquare').data('nivoslider').stop();
+  $(window).load(function () {
+    $('#slider-csquare').nivoSlider();
+    $('#slider-csquare').data('nivoslider').stop();
 
-      $('#slider-kaoture').nivoSlider();
-      $('#slider-kaoture').data('nivoslider').stop();
+    $('#slider-kaoture').nivoSlider();
+    $('#slider-kaoture').data('nivoslider').stop();
 
-      $('#slider-linemart').nivoSlider();
-      $('#slider-linemart').data('nivoslider').stop();
+    $('#slider-linemart').nivoSlider();
+    $('#slider-linemart').data('nivoslider').stop();
 
-      $('#slider-Hacc').nivoSlider();
-      $('#slider-Hacc').data('nivoslider').stop();
+    $('#slider-Hacc').nivoSlider();
+    $('#slider-Hacc').data('nivoslider').stop();
 
-    });
+  });
 
   /* magnific popup */
   $('.portfolio-link').magnificPopup({
-      type:'inline',
-      midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    type: 'inline',
+    midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
   $('#portfolio-slide-kaoture').magnificPopup({
-    type:'inline',
+    type: 'inline',
     midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     callbacks: {
-      open: function() {
+      open: function () {
         $('#slider-kaoture').data('nivoslider').start();
-          
+
       },
-      close: function() {
+      close: function () {
         $('#slider-kaoture').data('nivoslider').stop();
       }
     }
   });
   $('#portfolio-slide-linemart').magnificPopup({
-    type:'inline',
+    type: 'inline',
     midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     callbacks: {
-      open: function() {
+      open: function () {
         $('#slider-linemart').data('nivoslider').start();
-          
+
       },
-      close: function() {
+      close: function () {
         $('#slider-linemart').data('nivoslider').stop();
       }
     }
   });
   $('#portfolio-slide-Hacc').magnificPopup({
-    type:'inline',
+    type: 'inline',
     midClick: true, // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     callbacks: {
-      open: function() {
+      open: function () {
         $('#slider-Hacc').data('nivoslider').start();
-          
+
       },
-      close: function() {
+      close: function () {
         $('#slider-Hacc').data('nivoslider').stop();
       }
     }
