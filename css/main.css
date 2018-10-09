@@ -325,8 +325,12 @@ section#resume .items li:last-child:after{
 section#resume .exp-detail {
     margin-left: 1.3em;
 }
-section#resume .exp-detail li {
+section#resume .exp-detail > li {
     list-style-type: disc;
+    display: list-item;
+}
+section#resume ol > li {
+    list-style-type: decimal;
     display: list-item;
 }
 
