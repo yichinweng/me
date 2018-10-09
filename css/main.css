@@ -218,7 +218,7 @@ header#top{
     min-height: 500px;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center top;
+    background-position: center center;
     background-size: cover !important;
     text-align: center;
 }
@@ -241,6 +241,7 @@ header .container{
     width: 100%;
     color:#fff;
     padding: 80px 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 header h1{
     font-size: 5em;
@@ -264,6 +265,7 @@ header#top a, header#top a:link, header#top a:visited{
    ========================================================================== */
 section#about, section#portfolio{
     background-color: #eee;
+    position: relative;
 }
 
 section#about a, section#about a:link, section#about a:visited{
@@ -274,7 +276,7 @@ section#about a:hover, section#about a:focus{
     color: #888;
 }
 div#profile-pic{
-    background: url('../img/profile.jpg?20180525');
+    background: url('../img/profile.png');
     background-size: cover;
     background-position: center center;
     width: 140px;
