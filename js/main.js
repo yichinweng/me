@@ -46,34 +46,6 @@ $(function () {
       focusOffset: 0
     });
 
-  /*radar chart*/
-  // Get context with jQuery - using jQuery's .get() method.
-  var ctx = $("#trait-chart").get(0).getContext("2d");
-  // This will get the first returned node in the jQuery collection.
-  var myNewChart = new Chart(ctx);
-  var data = {
-    labels: ["責任心", "一不作二不休", "天然搞笑", "善良", "運氣值", "好奇心"],
-    datasets: [
-      {
-        label: "My First dataset",
-        fillColor: "rgba(151,187,205,0.2)",
-        strokeColor: "rgba(151,187,205,1)",
-        pointColor: "rgba(151,187,205,1)",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(151,187,205,1)",
-        data: [9, 10, 6, 8, 2, 7]
-      }
-    ]
-  };
-  var options = {
-    pointLabelFontColor: "#555",
-    pointLabelFontSize: 15
-
-  };
-
-  myNewChart.Radar(data, options);
-
   /* skill bar animate */
   $(window).scroll(function () {
     var nowTop = $(this).scrollTop(),
@@ -152,5 +124,15 @@ $(function () {
       }
     }
   });
+
+  // GA
+  (function (b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+        function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+        e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+  ga('create', 'UA-65425974-1', 'auto'); ga('send', 'pageview');
 
 });

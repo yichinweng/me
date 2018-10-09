@@ -146,10 +146,13 @@ h2{
     max-width: 1000px;
     border-bottom: 1px solid #E8E8E8;
     padding: 40px 0px 30px 0px;
-
+}
+.detail:after {
+    content: '';
+    clear: both;
+    display: block;
 }
 .detail-left{
-    /*background-color: #333 ;*/
     float: left;
     margin:0px 0px 0px 30px;
 }
@@ -283,7 +286,10 @@ div#profile-pic{
     height: 140px;
     border-radius: 100%;
 }
-
+.about-detail {
+    float: left;
+    width: 50%;
+}
 #radar-chart{
     max-width: 350px;
     /*background-color: #ff3; */
@@ -571,6 +577,13 @@ footer{
     div#profile-pic{
         width: 120px;
         height: 120px;
+    }
+    .about-detail {
+        clear: both;
+        width: 100%;
+    }
+    .about-detail:first-child {
+        margin-bottom: 20px;
     }
 }
 
