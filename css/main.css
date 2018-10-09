@@ -217,7 +217,7 @@ header#top{
     height: 100vh;
     min-height: 500px;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center top;
     background-size: cover !important;
     text-align: center;
@@ -234,17 +234,17 @@ header .container{
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    border: 1px solid #fff;
+    max-width: 950px;
 }
 .textarea{
     width: 100%;
-    margin-bottom: 60px;
     color:#fff;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 80px 0;
 }
 header h1{
     font-size: 5em;
-    margin-bottom: 20px;
+    margin: 0 0 40px 0;
     font-family:"draft","微軟正黑體","Microsoft JhengHei", sans-serif;
 }
 header .detail{
@@ -540,7 +540,9 @@ footer{
     html{
         font-size: 0.8em;
     }
-    
+    .textarea{
+        padding: 40px 0;
+    }
     .detail-left{
         float: none;
         margin:0px 0px 40px 0px;

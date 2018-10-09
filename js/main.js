@@ -25,8 +25,6 @@ $(function () {
 
   /* scroll-watch*/
   $('.scrollwatch').scrollWatch(function (focus) {
-    //console.log(focus);
-    //console.log(focus.section.id);
     $('#navbar > a').removeClass('active');
     $('#navbar > a[href=#' + focus.section.id + ']').addClass('active');
     if (focus.section.id == 'hide-menu') {
@@ -78,8 +76,18 @@ $(function () {
 
   /* skill bar animate */
   $(window).scroll(function () {
-    var offsetTop = 700;
-    if ($(window).scrollTop() + offsetTop > $('#skill').offset().top) {
+    var nowTop = $(this).scrollTop(),
+        offsetTop = 700,
+        topHeight = $('#top').height() - 300;
+    
+    if (nowTop <= topHeight) {
+      $('header .container').css({
+        'margin-top': nowTop,
+        'opacity': 1 - nowTop/topHeight,
+      });
+    }
+
+    if (nowTop + offsetTop > $('#skill').offset().top) {
       $(".toeic").addClass('ani-toeic');
     }
   });
