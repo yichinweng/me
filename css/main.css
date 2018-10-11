@@ -212,9 +212,11 @@ h2{
    header#top
    ========================================================================== */
 
-header#top{
+header#top, #bg-small{
+    position: relative;
+    overflow: hidden;
     background-color: #000;
-    background-image: url("../img/topBg.jpg");
+    /* background-image: url("../img/top_bg.jpg"); */
     height: 100vh;
     min-height: 500px;
     background-repeat: no-repeat;
@@ -223,6 +225,21 @@ header#top{
     background-size: cover !important;
     text-align: center;
 }
+#bg-small {
+    position: absolute;
+    background-image: url("../img/top_bg_small.jpg");
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    transition: opacity 1s linear;
+    filter: blur(50px);
+    /* this is needed so Safari keeps sharp edges */
+    transform: scale(1.2);
+}
+#bg-small.loaded {
+    opacity: 0;
+}
 header:before{
     content: '';
     display: inline-block;
@@ -230,6 +247,7 @@ header:before{
     height: 100%;
 }
 header .container{
+    position: relative;
     margin: 0px auto;
     width: 85%;
     display: inline-block;
@@ -237,6 +255,7 @@ header .container{
     text-align: center;
     border: 1px solid #fff;
     max-width: 950px;
+    z-index: 2;
 }
 .textarea{
     width: 100%;
@@ -335,6 +354,7 @@ section#resume ol > li {
     font-size: 0.9em;
 }
 .skill-num{
+    margin: 0 0 10px 10px;
     font-size: 1.2em;
 }
 li.skill-bar{
