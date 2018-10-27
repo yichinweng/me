@@ -21,6 +21,7 @@ html {
     src: local("HuiFont"),
          local("田氏方筆刷体繁"),
          url(../fonts/HuiFont.ttf);
+    font-display: swap;
 }
 /*
  * Remove text-shadow in selection highlight:
@@ -223,6 +224,9 @@ header#top, #bg-small{
     background-position: center center;
     background-size: cover !important;
     text-align: center;
+}
+#title {
+    visibility: hidden;
 }
 #bg-small {
     position: absolute;

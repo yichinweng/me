@@ -21,7 +21,7 @@ $(function () {
 
   /* text-fit */
   setTimeout(function () {
-    $('#title').fitText(1, { minFontSize: '20px', maxFontSize: '90px' });
+    $('#title').css({'visibility': 'visible'}).fitText(1, { minFontSize: '20px', maxFontSize: '90px' });
   }, 100);
 
   /* smooth scrolling */
