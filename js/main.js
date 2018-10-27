@@ -1,14 +1,20 @@
 $(function () {
-  (function () {
-    //  blur bg
-    var bg = new Image(),
-      bgSrc =  $('header#top').data('bg');
-      bg.src = bgSrc;
-    bg.onload = function() {
-      $('header#top').css({'background-image': 'url(' + bgSrc + ')'});
-      $('#bg-small').addClass('loaded');
-    }
-  })();
+  if (isMobileDevice()) {
+    $('header#top').css({'height': window.innerHeight});
+  }
+
+  //  blur bg
+  var bg = new Image(),
+    bgSrc =  $('header#top').data('bg');
+    bg.src = bgSrc;
+  bg.onload = function() {
+    $('header#top').css({'background-image': 'url(' + bgSrc + ')'});
+    $('#bg-small').addClass('loaded');
+  }
+
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  };
   
   /* scrollDepth */
   $.scrollDepth();

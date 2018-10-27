@@ -216,7 +216,6 @@ header#top, #bg-small{
     position: relative;
     overflow: hidden;
     background-color: #000;
-    /* background-image: url("../img/top_bg.jpg"); */
     height: 100vh;
     min-height: 500px;
     background-repeat: no-repeat;
@@ -583,6 +582,9 @@ footer{
     /* Style adjustments for viewports that meet the condition */
     html{
         font-size: 0.8em;
+    }
+    header#top {
+        background-attachment: initial;
     }
     .textarea{
         padding: 40px 0;
