@@ -352,7 +352,10 @@ section#resume ol > li {
     list-style-type: decimal;
     display: list-item;
 }
-
+section#resume .job-detail {
+    font-size: 0.9em;
+    margin: 4px 0 10px 0;
+}
 #skill{
     font-size: 0.9em;
 }
