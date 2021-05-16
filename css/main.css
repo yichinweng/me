@@ -434,6 +434,7 @@ section#portfolio .title{
     color: #333;
     font-size: 1.2em;
     line-height: 2;
+    width: 100%;
 }
 .portfolio-padding{
     width: 90%;

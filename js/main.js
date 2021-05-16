@@ -82,6 +82,15 @@ $(function () {
 
   /*nivo slider stop*/
   $(window).load(function () {
+    $('#slider-elite-cloud').nivoSlider();
+    $('#slider-elite-cloud').data('nivoslider').stop();
+
+    $('#slider-elite-tutor').nivoSlider();
+    $('#slider-elite-tutor').data('nivoslider').stop();
+
+    $('#slider-elite-voca').nivoSlider();
+    $('#slider-elite-voca').data('nivoslider').stop();
+
     $('#slider-csquare').nivoSlider();
     $('#slider-csquare').data('nivoslider').stop();
 
