@@ -285,7 +285,7 @@ header#top a, header#top a:link, header#top a:visited{
 /* ==========================================================================
    section#about
    ========================================================================== */
-section#about, section#portfolio{
+section#about, section.portfolio{
     background-color: #eee;
     position: relative;
 }
@@ -372,6 +372,9 @@ li.skill-bar{
 #toeic-bg{
     width: 85%;
 }
+#jlpt-bg{
+    width: 85%;
+}
 li.skill-bar .bar-expand{
     position: absolute;
     background-color: #333;
@@ -385,6 +388,13 @@ li.skill-bar .bar-expand{
     animation-name: skill-toeic;
     animation-duration: 2s;
 }
+.ani-jlpt{
+    width: 50%;
+    -webkit-animation-name: skill-jlpt; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: skill-jlpt;
+    animation-duration: 2s;
+}
 /* Chrome, Safari, Opera */
 @-webkit-keyframes skill-toeic {
     from {width: 0%;}
@@ -394,16 +404,24 @@ li.skill-bar .bar-expand{
     from {width: 0%;}
     to {width: 77%;}
 }
+@-webkit-keyframes skill-jlpt {
+    from {width: 0%;}
+    to {width: 50%;}
+}
+@keyframes skill-jlpt {
+    from {width: 0%;}
+    to {width: 50%;}
+}
 /* ==========================================================================
    section#portfolio
    ========================================================================== */
-section#portfolio .detail:after{
+section.portfolio .detail:after{
     content: " ";
     display: block; 
     height: 0; 
     clear: both;
 }
-section#portfolio .title{
+section.portfolio .title{
     text-align: center;
     margin-bottom: 40px;
 }

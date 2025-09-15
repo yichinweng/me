@@ -95,6 +95,7 @@ $(function () {
 
 		if (nowTop + offsetTop > $('#skill').offset().top) {
 			$('.toeic').addClass('ani-toeic');
+			$('.jlpt').addClass('ani-jlpt');
 		}
 	});
 
